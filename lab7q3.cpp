@@ -19,10 +19,10 @@ int fx(int i, int j){
 int gx(int i, int j){
 	if(i%2==1 && i<=j){
 		cout<< i << endl;
-		return fx(i+2,j);
+		return gx(i+2,j);
 	}
 	else if(i%2==0 && i<=j){
-		i=i+2;
+		i=i+1;
 		cout<< i << endl;
 		return gx(i+2,j);	
 	}
