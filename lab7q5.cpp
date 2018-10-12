@@ -5,24 +5,22 @@ using namespace std;
 //to take the sum of even numbers
 int fx(int i, int j){
 	if(i%2==0 && i<j){
-		return i;
+		return i+fx(i+2,j);
 	}	
 	else if(i%2==1 && i<j){
 		i=i+1;
-		return i;
+		return i+fx(i+2,j);
 	}
-	return i+fx(i+2,j);
 }
 //to take the sum of odd numbers
 int gx(int i, int j){
 	if(i%2==1 && i<j){
-		return i;
+		return i+gx(i+2,j);
 	}
 	else if(i%2==0 && i<j){
 		i=i+1;
-		return i;	
+		return i+gx(i+2,j);	
 	}
-	return i+gx(i+2,j);
 }
 //declare the main functions
 //ask the users choice
